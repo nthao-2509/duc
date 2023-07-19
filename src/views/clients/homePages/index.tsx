@@ -1,20 +1,23 @@
-import React from "react";
-import Carousel from "components/clients/Carousel";
-import BannerFeatureProduct from "components/clients/homeComponents/BannerFeatureProduct";
-import Collection from "components/clients/homeComponents/Collection";
-import FeaturedProducts from "components/clients/homeComponents/FeaturedProducts";
-import Service from "components/clients/homeComponents/Service";
-import FeaturedPosts from "components/clients/homeComponents/FeaturedPosts";
+import OurTeamComponent from "components/clients/OurTeamComponent";
+import AboutUsHome from "components/clients/aboutUsComponents";
+import BannerComponent from "components/clients/bannerComponents";
+import ContactComponent from "components/clients/contactComponent";
+import HeaderComponent from "components/clients/headerComponents";
+import JobComponent from "components/clients/jobComponents";
+import PopularComponent from "components/clients/popularComponent";
+import TestimonialComponent from "components/clients/testimonialComponent";
 
 const HomePageView = () => {
   return (
     <>
-      <Carousel />
-      <Collection />
-      <FeaturedProducts />
-      <BannerFeatureProduct />
-      <Service />
-      <FeaturedPosts />
+      <HeaderComponent />
+      <AboutUsHome />
+      <JobComponent />
+      <BannerComponent />
+      <PopularComponent />
+      <OurTeamComponent />
+      <TestimonialComponent />
+      <ContactComponent />
     </>
   );
 };

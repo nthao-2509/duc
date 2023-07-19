@@ -1,12 +1,14 @@
-import AddProduct from "views/admin/AddProduct";
-import Customers from "views/admin/Customers";
-import ListProduct from "views/admin/ListProduct";
+import AdminAccount from "views/admin/AdminAccount";
+import Component from "views/admin/Component";
+import Home from "views/admin/Home";
+import MailBox from "views/admin/MailBox";
 import MainDashboard from "views/admin/MainDashboard";
-import Project from "views/admin/Project";
+import Schedule from "views/admin/Schedule";
+import Table from "views/admin/Table";
 
 export const RoutesAdmin = [
   {
-    title: "Main Menu",
+    title: "",
     layout: "/admin",
     views: [
       {
@@ -15,35 +17,47 @@ export const RoutesAdmin = [
         icon: <i className='fa-solid fa-grip'></i>,
         component: <MainDashboard />,
       },
-      {
-        name: "Project",
-        path: "project",
-        icon: <i className='fa-solid fa-list-check'></i>,
-        component: <Project />,
-      },
-      {
-        name: "Customers",
-        path: "customers",
-        icon: <i className='fa-solid fa-users'></i>,
-        component: <Customers />,
-      },
     ],
   },
   {
-    title: "Product",
+    title: "Detail",
     layout: "/admin",
     views: [
       {
-        name: "Add Product",
-        path: "add-product",
+        name: "Home",
+        path: "home",
         icon: <i className='fa-solid fa-plus'></i>,
-        component: <AddProduct />,
+        component: <Home />,
       },
       {
-        name: "List Product",
-        path: "list-product",
+        name: "Admin account",
+        path: "admin-account",
         icon: <i className='fa-solid fa-list-check'></i>,
-        component: <ListProduct />,
+        component: <AdminAccount />,
+      },
+      {
+        name: "Table",
+        path: "table",
+        icon: <i className='fa-solid fa-list-check'></i>,
+        component: <Table />,
+      },
+      {
+        name: "Component",
+        path: "component",
+        icon: <i className='fa-solid fa-list-check'></i>,
+        component: <Component />,
+      },
+      {
+        name: "Mail Box",
+        path: "mail-box",
+        icon: <i className='fa-solid fa-list-check'></i>,
+        component: <MailBox />,
+      },
+      {
+        name: "Schedule",
+        path: "schedule",
+        icon: <i className='fa-solid fa-list-check'></i>,
+        component: <Schedule />,
       },
     ],
   },

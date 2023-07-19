@@ -13,11 +13,8 @@ const Sidebar = (props: {
       {/* logo */}
       <div className='top'>
         <div className='logo'>
-          <img src='/images/logo.png' alt='logo' />
-          <p>Evaly</p>
-        </div>
-        <div className='toggle'>
-          <img src='/images/toggle-sidebar.png' alt='toggle' />
+          <img src='/images/avatar.png' alt='logo' />
+          <p>Dashboard</p>
         </div>
       </div>
       <ul className='mb-auto pt-1'>

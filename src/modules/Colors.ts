@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   violet: "#7E33E0",
   white: "#ffffff",
@@ -23,4 +24,5 @@ export default {
   secondaryColor1: "#23856D",
   primaryTextColor: "#23A6F0",
   textColor: "#252B42",
+  yellow: "#F2BC33",
 };

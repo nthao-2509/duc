@@ -8,12 +8,12 @@ export const StyleAdmin = styled.div`
     height: 100%;
     min-height: 100vh;
     background-color: #f3f4f8;
-    padding: 10px 26px;
   }
   .content {
-    margin-top: 20px;
-    padding: 20px 0;
+    background-color: #d9d9d9;
+    padding: 10px 20px;
     width: 100%;
     height: 100%;
+    min-height: 100vh;
   }
 `;

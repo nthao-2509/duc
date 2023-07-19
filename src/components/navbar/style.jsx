@@ -1,65 +1,29 @@
 import styled from "styled-components";
 export const StyleNavbar = styled.div`
-  background-color: transparent;
+  background-color: #fff;
+  height: 90px;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
   justify-content: space-between;
-  .title {
-    h1 {
-      font-size: 28px;
-      font-weight: 500;
-      line-height: 22px;
-      margin-bottom: 0 !important;
+  padding: 0 20px;
+
+  .search {
+    position: relative;
+    width: 30%;
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid #777;
+      outline: none;
+      border-radius: 10px;
     }
-  }
-  .left {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    .notification {
-      i {
-        font-size: 22px;
-        color: #4b465c !important;
-      }
-    }
-    .user {
-      display: flex;
-      align-items: center;
-      background-color: #ffffff;
-      padding: 10px 20px;
-      border-radius: 50px;
-      gap: 15px;
-      img {
-        background-color: #4b465c;
-      }
-      .name {
-        p {
-          font-size: 14px;
-          margin: 0;
-          padding: 0;
-          &:first-child {
-            font-size: 15px;
-            font-weight: 600px;
-          }
-        }
-      }
-      .icon {
-        background-color: transparent;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.4s ease;
-        &:hover {
-          background-color: #4b465c;
-          color: #ffffff;
-        }
-      }
+    i {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      cursor: pointer;
     }
   }
 `;

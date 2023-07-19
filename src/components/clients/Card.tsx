@@ -1,56 +1,66 @@
 import React from "react";
-import { StyleCard } from "./styled/CardStyled";
+import { CardStyled } from "./styles/Card";
 
-type Props = {
+const Card = (props: {
   image: string;
+  raised: string | number | undefined;
+  goal: string | number | undefined;
   title: string;
-  description: string;
-  oldPrice: string;
-  newPrice: string;
-  colors: string[];
-  sale: boolean;
-  newProduct: boolean;
-  key: number | string;
-};
-
-const Card = ({
-  image,
-  title,
-  description,
-  oldPrice,
-  newPrice,
-  colors,
-  sale,
-  newProduct,
-  key,
-}: Props) => {
+  des: string;
+  button: boolean;
+  comment: boolean;
+}) => {
   return (
-    <div key={key}>
-      <StyleCard>
-        <div className='image' key={key}>
-          <img src={image} alt={title} />
+    <CardStyled>
+      <div className='item'>
+        <div className='top'>
+          <img src={props.image} alt='' />
         </div>
-        <div className='content'>
-          <div className='title'>
-            <h5>{title}</h5>
+        <div className='bottom'>
+          <div className='content'>
+            <div className='raised-goal'>
+              {props.raised && (
+                <div className='raised'>
+                  <p>Raised: {props.raised}</p>
+                </div>
+              )}
+              {props.goal && (
+                <div className='raised'>
+                  <p>Goal: {props.goal}</p>
+                </div>
+              )}
+            </div>
+            <div className='title'>
+              <h1>{props.title}</h1>
+            </div>
+            <div className='description'>
+              <p>{props.des}</p>
+            </div>
           </div>
-          <div className='description'>
-            <p>{description}</p>
-          </div>
-          <div className='price'>
-            <del className='price__old'>${oldPrice}</del>
-            <p className='price__new'>${newPrice}</p>
-          </div>
-          <div className='colors'>
-            <ul>
-              {colors?.map((color: string, index: number) => (
-                <li style={{ backgroundColor: color }} key={index}></li>
-              ))}
-            </ul>
-          </div>
+          {props.button && (
+            <div className='button'>
+              <button className='learnMore'>Learn More</button>
+              <button className='DonateNow'>Donate now</button>
+            </div>
+          )}
+          {props.comment && (
+            <div className='comment'>
+              <div className='comment__content'>
+                <div className='item'>
+                  <i className='fa-solid fa-user'></i>
+                  <h1>Admin</h1>
+                </div>
+                <div className='item'>
+                  <i className='fa-solid fa-comment'></i>
+                  <p>15</p>
+                  <h1>Comment</h1>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
-      </StyleCard>
-    </div>
+      </div>
+    </CardStyled>
   );
 };
 
